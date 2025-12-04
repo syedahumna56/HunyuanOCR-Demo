@@ -193,7 +193,7 @@ with gr.Blocks() as demo:
                 label="Custom Query / Prompt", 
                 placeholder="Extract text...", 
                 lines=2, 
-                value="检测并识别图片中的文字，将文本坐标格式化输出。"
+                value="Convert to Markdown precisely."
             )
 
             with gr.Accordion("Advanced Settings", open=False):
