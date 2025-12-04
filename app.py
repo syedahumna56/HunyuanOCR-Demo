@@ -217,7 +217,7 @@ with gr.Blocks() as demo:
                 gr.Examples(examples=image_examples, inputs=image_input)
 
         with gr.Column(scale=2):
-            output_text = gr.Textbox(label="Recognized Text", lines=20, interactive=True, show_copy_button=True)
+            output_text = gr.Textbox(label="Recognized Text", lines=20, interactive=True)
 
     submit_btn.click(
         fn=run_hunyuan_model,
