@@ -11,7 +11,7 @@ supervision
 matplotlib
 easydict
 kernels
-gradio
+gradio==6.0.1
 einops
 spaces
 addict
