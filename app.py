@@ -9,17 +9,6 @@ from transformers import (
 from gradio.themes import Soft
 from gradio.themes.utils import colors, fonts, sizes
 
-# Import spaces if available, otherwise mock it
-try:
-    import spaces
-except ImportError:
-    class spaces:
-        @staticmethod
-        def GPU(func):
-            def wrapper(*args, **kwargs):
-                return func(*args, **kwargs)
-            return wrapper
-
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"✅ Using device: {device}")
 
@@ -133,7 +122,6 @@ def clean_repeated_substrings(text):
 
 # --- Main Inference Logic ---
 
-@spaces.GPU
 def run_hunyuan_model(
     image, 
     custom_prompt,
